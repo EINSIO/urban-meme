@@ -1,0 +1,440 @@
+:root {
+    --main-bg-color: rgb(101, 48, 48);
+    --header-bg-color: #ffffff;
+    --header-text-color: #000000;
+}
+
+.col-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 20px;
+    a{
+        text-align: right;
+    }
+}
+
+nav {
+    background-color: #ffffff;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px; 
+}
+
+.product {
+    border: 1px solid black; 
+    padding: 10px; 
+    text-align: center;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 10px;
+}
+
+
+table {
+    width: 40%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    margin-top: -270px;
+    font-family: Arial, sans-serif;
+    
+}
+
+th, td {
+    border: 1px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #faa4a3;
+}
+
+caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.single {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #bea5a5;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.single:hover, .happ:hover {
+    background-color: rgb(123, 54, 123);
+}
+.lotto {
+    text-align: right;
+}
+.happ{
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: solid black;
+    float: right;
+}
+
+.upp{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: smaller;
+    text-align: left;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 840px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media query for screens between 768px and 1024px */
+@media screen and (min-width: 840px) and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+@media screen and (min-width: 1px) and (max-width: 320px) {
+  .product-grid {
+      grid-template-columns: 1fr;
+  }
+
+  h1, .logo {
+    display:none;
+  }
+}
+
+table {
+  width: 100%;
+  margin-top: 0px;
+}
+
+
+@media (max-width: 1700px){
+    table {
+        width: 100%;
+        margin-top: 0px;
+    }}
+
+a:hover{
+    color: rgb(255, 0, 234);
+}
+
+
+.lotto{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.tab, .tab * {
+    box-sizing: border-box;
+  }
+  .tab { max-width: 100%; }
+  
+
+  .tab input { display: none; }
+  
+
+  .tab label {
+    position: relative; 
+    display: block;
+    width: 100%;
+    padding: .6em;
+    margin:0;
+    border-bottom: 1px solid rgb(189, 189, 189);
+    color: #fff;
+    background: rgb(102, 6, 6);
+    cursor: pointer;
+  }
+  
+  .tab .content {
+    background: var(--tablebg);
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+  }
+  .tab .content p { padding: .6em; }
+
+  .tab input:checked ~ .content { max-height: 100vh; }
+  
+
+  .tab label::after {
+
+    display: block;  
+    content: "\25b6";
+   
+    position: absolute;
+    right: 10px; top: 10px;
+
+    transition: all 0.4s;
+  }
+   
+  .tab input:checked ~ label::after { transform: rotate(90deg); }
+
+
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  
+  }
+  
+  .dropdown button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: left;
+    background-color: #f9f9f9;
+    min-width: 170px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .filter-option {
+    position: relative;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .filter-option:hover .accordion-content {
+    display: block;
+  }
+
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+
+  .form-cont {
+    text-align: left;
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+
+  .form-cont input[type=text], .form-cont input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+
+  .form-cont input[type=text]:focus, .form-cont input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+
+  .form-cont .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  
+  .form-cont .cancel {
+    background-color: red;
+  }
+  
+ 
+  .form-cont .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+
+
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.lotto{
+  width: 30%;
+  float: right;
+}
+
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev, .next:hover{
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.logo{
+  width: 50%;
+  height: auto;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 

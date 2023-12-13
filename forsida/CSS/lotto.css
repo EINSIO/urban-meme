@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    background-image: url('../myndir/lottabakgrunnur.jpg'); /* Replace with your image path or URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.col-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  header {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    a{
+        text-align: right;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 20px;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}
+
+h2 {
+    color: #495057;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+p{
+    font-size: small;
+    font-weight: 700;
+}
+h2{
+    color: black;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  
+  }
+  
+  .dropdown button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: left;
+    background-color: #f9f9f9;
+    min-width: 170px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .filter-option {
+    position: relative;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .filter-option:hover .accordion-content {
+    display: block;
+  }
